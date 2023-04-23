@@ -17,9 +17,13 @@ public class Loan {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
+    @Column(name = "loan_amount")
     private double loanAmount;
+    @Column(name = "loan_type")
     private String loanType;
+    @Column(name = "duration")
     private int duration;
+    @Column(name = "monthly_emi")
     private double monthlyEMI;
     @ManyToOne
     @JoinColumn(name = "id", insertable = false, updatable = false)
